@@ -179,5 +179,8 @@ function filterTable(input){
     var tb = document.getElementsByClassName("myTable");
     var tr = Array.prototype.slice.call(tb.rows, 1);
     var i;
-    for(var i in )
+
+    for(i = 0; i < tr.length; i++)
+           if(tr[i].cells[0].textContent.trim()==input) alert(tr[i].cell[0].textContent.trim());
+
 }
