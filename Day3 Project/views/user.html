@@ -1,15 +1,15 @@
 <div>
     <p>
-        FirstName: <input ng-model="firstName" type="text">
+        FirstName: <input ng-model="contact.firstName" type="text">
     </p>
     <p>
-        LastName: <input ng-model="lastName" type="text">
+        LastName: <input ng-model="contact.lastName" type="text">
     </p>
     <p>
-        Id: <input ng-model="id" type="number">
+        Id: <input ng-model="contact.id" type="number">
     </p>
     <p>
-        Age: <input ng-model="age" type="number">
+        Age: <input ng-model="contact.age" type="number">
     </p>
     <p>
         <button ng-click="back()">Back</button>
@@ -17,6 +17,31 @@
     <p>
         <button ng-click="reset()">Reset</button>
     </p>
+    <p>
+        <button ng-click="save()">Save</button>
+    </p>
+
+    <button ng-click="show()">Show List</button>
+    <div ng-show="val">
+    <table class="container" >
+        <thead>
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Id</th>
+            <th>Age</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="contact in contacts">
+            <td>{{ contact.firstName }}</td>
+            <td>{{ contact.lastname }}</td>
+            <td>{{ contact.id }}</td>
+            <td>{{ contact.age }}</td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
 
 
 

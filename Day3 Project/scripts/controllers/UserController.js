@@ -1,5 +1,5 @@
-hrApp.controller('UserController', ['$scope','$location',
-    function($scope,$location) {
+hrApp.controller('UserController', ['$scope','$location','userService',
+    function($scope,$location,userService) {
 
         $scope.back = function() {
 
@@ -9,9 +9,21 @@ hrApp.controller('UserController', ['$scope','$location',
 
             $scope.firstName="";
             $scope.lastName="";
-            $scope.id=null;
+            $scope.id=undefined;
             $scope.age=null;
         };
+        $scope.contacts = userService.list();
+
+        $scope.save = function () {
+            userService.save($scope.contact);
+            $scope.contact = {};
+        }
+
+        $scope.val=false;
+        $scope.show = function () {
+            if($scope.val!=true) $scope.val=true;
+                else $scope.val=false;
+        }
 
 }]);
 
