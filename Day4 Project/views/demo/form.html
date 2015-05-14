@@ -1,0 +1,18 @@
+<div class="container">
+
+    <ng-form name="testForm">
+        userType: <input name="input" ng-model="userType" required>
+        <span class="error" ng-show="testForm.input.$error.required">Required!</span><br>
+        userType = {{userType}}<br>
+        testForm.input.$pristine={{testForm.input.$pristine}}<br>
+        testForm.input.$dirty = {{testForm.input.$dirty}}<br>
+        testForm.input.$valid = {{testForm.input.$valid}}<br>
+        testForm.input.$error = {{testForm.input.$error}}<br>
+        testForm.$valid = {{testForm.$valid}}<br>
+        testForm.$error.required = {{!!testForm.$error.required}}<br>
+        testForm.$invalid={{testForm.$invalid}}<br>
+        testForm.$pristine={{testForm.$pristine}}<br>
+        <!--testForm.$submitted={{testForm.$submitted}}<br>-->
+
+    </ng-form>
+</div>
