@@ -39,9 +39,9 @@ hrApp.controller('EmployeeEditController', ['$scope', '$http', '$routeParams', '
             success(function (data, status, headers, config) {
                 $scope.jobs = data;
             });
-        $http({url: $commonResourcesFactory.findOneEmployeeUrl, method: 'GET'}).
+        $http({url: $commonResourcesFactory.findOneEmployeeUrl+ $routeParams.employeeid, method: 'GET'}).
             success(function (data, status, headers, config) {
-                $scope.jobs = data;
+                $scope.employee = data;
             });
 
     $scope.datePattern = /^\d{4}-\d{2}-\d{2}$/;
