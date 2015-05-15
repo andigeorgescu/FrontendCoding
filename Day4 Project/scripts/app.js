@@ -43,7 +43,7 @@ hrApp.config(['$routeProvider',
             .when('/employeeedit/:employeeid', {
                 templateUrl: 'views/employeeedit.html',
                     controller:'EmployeeEditController'
-    })
+            })
 
 
     .otherwise({
